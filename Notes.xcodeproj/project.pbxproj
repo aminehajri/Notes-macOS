@@ -12,6 +12,8 @@
 		E7625C142C2870D900628EFB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7625C132C2870D900628EFB /* Preview Assets.xcassets */; };
 		E7625C1D2C28717800628EFB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C1C2C28717800628EFB /* HomeView.swift */; };
 		E7625C1F2C2875A400628EFB /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C1E2C2875A400628EFB /* SideMenu.swift */; };
+		E7625C252C298E8D00628EFB /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C242C298E8D00628EFB /* Note.swift */; };
+		E7625C2E2C2994AD00628EFB /* NotesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7625C2C2C2994AD00628EFB /* NotesModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E7625C152C2870D900628EFB /* Notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Notes.entitlements; sourceTree = "<group>"; };
 		E7625C1C2C28717800628EFB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E7625C1E2C2875A400628EFB /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		E7625C242C298E8D00628EFB /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		E7625C2D2C2994AD00628EFB /* NotesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +58,13 @@
 		E7625C0B2C2870D800628EFB /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				E7625C232C298DD000628EFB /* Models */,
 				E7625C1B2C28715A00628EFB /* Views */,
 				E7625C0C2C2870D800628EFB /* NotesApp.swift */,
 				E7625C102C2870D900628EFB /* Assets.xcassets */,
 				E7625C152C2870D900628EFB /* Notes.entitlements */,
 				E7625C122C2870D900628EFB /* Preview Content */,
+				E7625C2C2C2994AD00628EFB /* NotesModel.xcdatamodeld */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -78,6 +84,14 @@
 				E7625C1E2C2875A400628EFB /* SideMenu.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E7625C232C298DD000628EFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7625C242C298E8D00628EFB /* Note.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7625C2E2C2994AD00628EFB /* NotesModel.xcdatamodeld in Sources */,
+				E7625C252C298E8D00628EFB /* Note.swift in Sources */,
 				E7625C1F2C2875A400628EFB /* SideMenu.swift in Sources */,
 				E7625C1D2C28717800628EFB /* HomeView.swift in Sources */,
 				E7625C0D2C2870D800628EFB /* NotesApp.swift in Sources */,
@@ -353,6 +369,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E7625C2C2C2994AD00628EFB /* NotesModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E7625C2D2C2994AD00628EFB /* NotesModel.xcdatamodel */,
+			);
+			currentVersion = E7625C2D2C2994AD00628EFB /* NotesModel.xcdatamodel */;
+			name = NotesModel.xcdatamodeld;
+			path = /Users/damin/Desktop/Notes/Notes/NotesModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E7625C012C2870D800628EFB /* Project object */;
 }
