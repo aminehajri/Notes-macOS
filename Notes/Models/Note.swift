@@ -10,7 +10,7 @@ import CoreData
 import AppKit
 
 @objc(Note)
-class Note: NSManagedObject {
+class Note: NSManagedObject, BaseModelProtocol {
     
 }
 
