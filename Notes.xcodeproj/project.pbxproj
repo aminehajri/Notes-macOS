@@ -14,6 +14,7 @@
 		E7625C1F2C2875A400628EFB /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C1E2C2875A400628EFB /* SideMenu.swift */; };
 		E7625C252C298E8D00628EFB /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C242C298E8D00628EFB /* Note.swift */; };
 		E7625C2E2C2994AD00628EFB /* NotesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7625C2C2C2994AD00628EFB /* NotesModel.xcdatamodeld */; };
+		E7625C312C29968A00628EFB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C302C29968A00628EFB /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E7625C1E2C2875A400628EFB /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		E7625C242C298E8D00628EFB /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		E7625C2D2C2994AD00628EFB /* NotesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesModel.xcdatamodel; sourceTree = "<group>"; };
+		E7625C302C29968A00628EFB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		E7625C0B2C2870D800628EFB /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				E7625C2F2C29967500628EFB /* Managers */,
 				E7625C232C298DD000628EFB /* Models */,
 				E7625C1B2C28715A00628EFB /* Views */,
 				E7625C0C2C2870D800628EFB /* NotesApp.swift */,
@@ -92,6 +95,14 @@
 				E7625C242C298E8D00628EFB /* Note.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E7625C2F2C29967500628EFB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E7625C302C29968A00628EFB /* CoreDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7625C312C29968A00628EFB /* CoreDataManager.swift in Sources */,
 				E7625C2E2C2994AD00628EFB /* NotesModel.xcdatamodeld in Sources */,
 				E7625C252C298E8D00628EFB /* Note.swift in Sources */,
 				E7625C1F2C2875A400628EFB /* SideMenu.swift in Sources */,

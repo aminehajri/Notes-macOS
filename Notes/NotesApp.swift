@@ -11,7 +11,8 @@ import SwiftUI
 struct NotesApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            let viewContext = CoreDataManager.shared.persistentContainer.viewContext
+            HomeView().environment(\.managedObjectContext, viewContext)
         }
     }
 }
