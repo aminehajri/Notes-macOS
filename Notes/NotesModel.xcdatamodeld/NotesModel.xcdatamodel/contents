@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Note" representedClassName="Note" syncable="YES">
+    <entity name="Category" representedClassName="Category" syncable="YES">
         <attribute name="color" attributeType="Transformable" valueTransformerName="NSColorTransformer" customClassName="NSColor"/>
         <attribute name="name" attributeType="String"/>
     </entity>

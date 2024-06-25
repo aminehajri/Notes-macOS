@@ -22,7 +22,7 @@ class AddNewListViewModel: ObservableObject {
     func save() {
         
         do {
-            let note = Note(context: context)
+            let note = Category(context: context)
             note.name = name
             note.color = NSColor(color)
             try note.save()

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddNewListView: View {
+struct AddNewCategoryView: View {
     
     @Environment(\.dismiss) var dismiss
     @ObservedObject private var addNewListViewModel: AddNewListViewModel
@@ -52,5 +52,5 @@ struct AddNewListView: View {
 
 #Preview {
     let viewContext = CoreDataManager.shared.persistentContainer.viewContext
-    return AddNewListView(addNewListViewModel: AddNewListViewModel(context: viewContext))
+    return AddNewCategoryView(addNewListViewModel: AddNewListViewModel(context: viewContext))
 }

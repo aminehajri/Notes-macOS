@@ -12,15 +12,18 @@
 		E7625C142C2870D900628EFB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7625C132C2870D900628EFB /* Preview Assets.xcassets */; };
 		E7625C1D2C28717800628EFB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C1C2C28717800628EFB /* HomeView.swift */; };
 		E7625C1F2C2875A400628EFB /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C1E2C2875A400628EFB /* SideMenu.swift */; };
-		E7625C252C298E8D00628EFB /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C242C298E8D00628EFB /* Note.swift */; };
+		E7625C252C298E8D00628EFB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C242C298E8D00628EFB /* Category.swift */; };
 		E7625C2E2C2994AD00628EFB /* NotesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7625C2C2C2994AD00628EFB /* NotesModel.xcdatamodeld */; };
 		E7625C312C29968A00628EFB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C302C29968A00628EFB /* CoreDataManager.swift */; };
 		E7625C342C299D8200628EFB /* AddNewListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C332C299D8200628EFB /* AddNewListViewModel.swift */; };
 		E7625C362C29A02200628EFB /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C352C29A02200628EFB /* BaseModelProtocol.swift */; };
-		E7625C382C2B1EC000628EFB /* AddNewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C372C2B1EC000628EFB /* AddNewListView.swift */; };
+		E7625C382C2B1EC000628EFB /* AddNewCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C372C2B1EC000628EFB /* AddNewCategoryView.swift */; };
 		E7625C3C2C2B21FE00628EFB /* ColorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C3B2C2B21FE00628EFB /* ColorListView.swift */; };
 		E7625C3E2C2B258700628EFB /* IconUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C3D2C2B258700628EFB /* IconUtils.swift */; };
 		E7625C412C2B6FDD00628EFB /* NSColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C402C2B6FDD00628EFB /* NSColorTransformer.swift */; };
+		E7625C432C2B74F400628EFB /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C422C2B74F400628EFB /* CategoriesViewModel.swift */; };
+		E7625C452C2B78F700628EFB /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C442C2B78F700628EFB /* CategoryViewModel.swift */; };
+		E7625C472C2B7CD100628EFB /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C462C2B7CD100628EFB /* CategoriesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,15 +34,18 @@
 		E7625C152C2870D900628EFB /* Notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Notes.entitlements; sourceTree = "<group>"; };
 		E7625C1C2C28717800628EFB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E7625C1E2C2875A400628EFB /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
-		E7625C242C298E8D00628EFB /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		E7625C242C298E8D00628EFB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E7625C2D2C2994AD00628EFB /* NotesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesModel.xcdatamodel; sourceTree = "<group>"; };
 		E7625C302C29968A00628EFB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E7625C332C299D8200628EFB /* AddNewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListViewModel.swift; sourceTree = "<group>"; };
 		E7625C352C29A02200628EFB /* BaseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelProtocol.swift; sourceTree = "<group>"; };
-		E7625C372C2B1EC000628EFB /* AddNewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListView.swift; sourceTree = "<group>"; };
+		E7625C372C2B1EC000628EFB /* AddNewCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryView.swift; sourceTree = "<group>"; };
 		E7625C3B2C2B21FE00628EFB /* ColorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListView.swift; sourceTree = "<group>"; };
 		E7625C3D2C2B258700628EFB /* IconUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconUtils.swift; sourceTree = "<group>"; };
 		E7625C402C2B6FDD00628EFB /* NSColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorTransformer.swift; sourceTree = "<group>"; };
+		E7625C422C2B74F400628EFB /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		E7625C442C2B78F700628EFB /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		E7625C462C2B7CD100628EFB /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +106,9 @@
 			children = (
 				E7625C1C2C28717800628EFB /* HomeView.swift */,
 				E7625C1E2C2875A400628EFB /* SideMenu.swift */,
-				E7625C372C2B1EC000628EFB /* AddNewListView.swift */,
+				E7625C372C2B1EC000628EFB /* AddNewCategoryView.swift */,
 				E7625C3B2C2B21FE00628EFB /* ColorListView.swift */,
+				E7625C462C2B7CD100628EFB /* CategoriesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -109,7 +116,7 @@
 		E7625C232C298DD000628EFB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E7625C242C298E8D00628EFB /* Note.swift */,
+				E7625C242C298E8D00628EFB /* Category.swift */,
 				E7625C352C29A02200628EFB /* BaseModelProtocol.swift */,
 			);
 			path = Models;
@@ -127,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				E7625C332C299D8200628EFB /* AddNewListViewModel.swift */,
+				E7625C422C2B74F400628EFB /* CategoriesViewModel.swift */,
+				E7625C442C2B78F700628EFB /* CategoryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -209,15 +218,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7625C452C2B78F700628EFB /* CategoryViewModel.swift in Sources */,
 				E7625C362C29A02200628EFB /* BaseModelProtocol.swift in Sources */,
 				E7625C312C29968A00628EFB /* CoreDataManager.swift in Sources */,
 				E7625C342C299D8200628EFB /* AddNewListViewModel.swift in Sources */,
-				E7625C382C2B1EC000628EFB /* AddNewListView.swift in Sources */,
+				E7625C382C2B1EC000628EFB /* AddNewCategoryView.swift in Sources */,
 				E7625C3C2C2B21FE00628EFB /* ColorListView.swift in Sources */,
 				E7625C2E2C2994AD00628EFB /* NotesModel.xcdatamodeld in Sources */,
-				E7625C252C298E8D00628EFB /* Note.swift in Sources */,
+				E7625C252C298E8D00628EFB /* Category.swift in Sources */,
+				E7625C472C2B7CD100628EFB /* CategoriesView.swift in Sources */,
 				E7625C1F2C2875A400628EFB /* SideMenu.swift in Sources */,
 				E7625C1D2C28717800628EFB /* HomeView.swift in Sources */,
+				E7625C432C2B74F400628EFB /* CategoriesViewModel.swift in Sources */,
 				E7625C3E2C2B258700628EFB /* IconUtils.swift in Sources */,
 				E7625C412C2B6FDD00628EFB /* NSColorTransformer.swift in Sources */,
 				E7625C0D2C2870D800628EFB /* NotesApp.swift in Sources */,

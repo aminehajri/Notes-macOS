@@ -14,9 +14,7 @@ struct SideMenu: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            List(1...5, id: \.self) { index in
-                Text("List \(index)")
-            }
+            CategoriesView(categoriesViewModel: CategoriesViewModel(context: context))
             Spacer()
             
             Button {
@@ -31,7 +29,7 @@ struct SideMenu: View {
         }.sheet(isPresented: $isPresented) {
             
         } content: {
-            AddNewListView(addNewListViewModel: AddNewListViewModel(context: context))
+            AddNewCategoryView(addNewListViewModel: AddNewListViewModel(context: context))
         }
         
     }
