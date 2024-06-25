@@ -25,6 +25,13 @@ class CategoriesViewModel: NSObject, ObservableObject {
         fetchAll()
     }
     
+    func delete(category: CategoryViewModel) {
+        let category: Category? = Category.byId(id: category.id)
+        if let category = category {
+            try? category.delete()
+        }
+    }
+    
     private func fetchAll() {
         do {
             try fetchedResultsController.performFetch()

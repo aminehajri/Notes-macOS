@@ -19,13 +19,19 @@ struct CategoriesView: View {
         VStack(alignment: .leading, spacing: 0) {
             
             List {
-                Text("Categories").foregroundStyle(.teal)
+                Text("My Lists").foregroundStyle(.teal)
                 ForEach(categoriesViewModel.categories) { category in
                     HStack {
                         Image(systemName: IconUtils.line3HorizontalCircleFill)
                             .font(.title)
                             .foregroundStyle(category.color)
                         Text(category.name)
+                    }.contextMenu {
+                        Button {
+                            categoriesViewModel.delete(category: category)
+                        } label: {
+                            Text("Delete")
+                        }
                     }
                     
                 }
