@@ -17,6 +17,10 @@
 		E7625C312C29968A00628EFB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C302C29968A00628EFB /* CoreDataManager.swift */; };
 		E7625C342C299D8200628EFB /* AddNewListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C332C299D8200628EFB /* AddNewListViewModel.swift */; };
 		E7625C362C29A02200628EFB /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C352C29A02200628EFB /* BaseModelProtocol.swift */; };
+		E7625C382C2B1EC000628EFB /* AddNewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C372C2B1EC000628EFB /* AddNewListView.swift */; };
+		E7625C3C2C2B21FE00628EFB /* ColorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C3B2C2B21FE00628EFB /* ColorListView.swift */; };
+		E7625C3E2C2B258700628EFB /* IconUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C3D2C2B258700628EFB /* IconUtils.swift */; };
+		E7625C412C2B6FDD00628EFB /* NSColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C402C2B6FDD00628EFB /* NSColorTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		E7625C302C29968A00628EFB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E7625C332C299D8200628EFB /* AddNewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListViewModel.swift; sourceTree = "<group>"; };
 		E7625C352C29A02200628EFB /* BaseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelProtocol.swift; sourceTree = "<group>"; };
+		E7625C372C2B1EC000628EFB /* AddNewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListView.swift; sourceTree = "<group>"; };
+		E7625C3B2C2B21FE00628EFB /* ColorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListView.swift; sourceTree = "<group>"; };
+		E7625C3D2C2B258700628EFB /* IconUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconUtils.swift; sourceTree = "<group>"; };
+		E7625C402C2B6FDD00628EFB /* NSColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,8 @@
 		E7625C0B2C2870D800628EFB /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				E7625C3F2C2B6FC100628EFB /* Transformers */,
+				E7625C3D2C2B258700628EFB /* IconUtils.swift */,
 				E7625C322C299D3100628EFB /* ViewModels */,
 				E7625C2F2C29967500628EFB /* Managers */,
 				E7625C232C298DD000628EFB /* Models */,
@@ -90,6 +100,8 @@
 			children = (
 				E7625C1C2C28717800628EFB /* HomeView.swift */,
 				E7625C1E2C2875A400628EFB /* SideMenu.swift */,
+				E7625C372C2B1EC000628EFB /* AddNewListView.swift */,
+				E7625C3B2C2B21FE00628EFB /* ColorListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +129,14 @@
 				E7625C332C299D8200628EFB /* AddNewListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E7625C3F2C2B6FC100628EFB /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				E7625C402C2B6FDD00628EFB /* NSColorTransformer.swift */,
+			);
+			path = Transformers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,10 +212,14 @@
 				E7625C362C29A02200628EFB /* BaseModelProtocol.swift in Sources */,
 				E7625C312C29968A00628EFB /* CoreDataManager.swift in Sources */,
 				E7625C342C299D8200628EFB /* AddNewListViewModel.swift in Sources */,
+				E7625C382C2B1EC000628EFB /* AddNewListView.swift in Sources */,
+				E7625C3C2C2B21FE00628EFB /* ColorListView.swift in Sources */,
 				E7625C2E2C2994AD00628EFB /* NotesModel.xcdatamodeld in Sources */,
 				E7625C252C298E8D00628EFB /* Note.swift in Sources */,
 				E7625C1F2C2875A400628EFB /* SideMenu.swift in Sources */,
 				E7625C1D2C28717800628EFB /* HomeView.swift in Sources */,
+				E7625C3E2C2B258700628EFB /* IconUtils.swift in Sources */,
+				E7625C412C2B6FDD00628EFB /* NSColorTransformer.swift in Sources */,
 				E7625C0D2C2870D800628EFB /* NotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
