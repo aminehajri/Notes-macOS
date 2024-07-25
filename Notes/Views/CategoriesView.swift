@@ -27,7 +27,7 @@ struct CategoriesView: View {
                         
                         NoteView(onNoteAdded: { title, dueDate in
                             categoriesViewModel.saveTo(category: category, title: title, dueDate: dueDate)
-                        })
+                        }, notes: category.notes)
                     } label: {
                         HStack {
                             Image(systemName: IconUtils.line3HorizontalCircleFill)

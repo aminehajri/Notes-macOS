@@ -12,24 +12,31 @@ struct NoteView: View {
     typealias NoteAdded = ((String, Date?) -> Void)?
     
     var onNoteAdded: NoteAdded
+    var notes: [NoteViewModel]
     
-    init(onNoteAdded: NoteAdded = nil) {
+    init(onNoteAdded: NoteAdded = nil, notes: [NoteViewModel]) {
         self.onNoteAdded = onNoteAdded
+        self.notes = notes
     }
     
     var body: some View {
         VStack(alignment: .leading) {
-            List(1...10, id: \.self) { index in
-                Text("Item \(index)")
-            }
             
-            AddNewNoteView { title, dueDate in
-                onNoteAdded?(title, dueDate)
+            List {
+                
+                ForEach(notes, id: \.noteId) { note in
+                    Text(note.title)
+//                    Divider()
+                }
+                
+                AddNewNoteView { title, dueDate in
+                    onNoteAdded?(title, dueDate)
+                }
             }
         }
     }
 }
 
 #Preview {
-    NoteView()
+    NoteView(notes: [])
 }
