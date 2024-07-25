@@ -29,4 +29,17 @@ struct CategoryViewModel: Identifiable {
         Color(category.color ?? .clear)
     }
     
+    var notesCount: Int {
+        notes.count
+    }
+    
+    var notes: [NoteViewModel] {
+        guard let notes = category.notes,
+              let myNotes = notes.allObjects as? [Note]
+        else {
+            return []
+        }
+        
+        return myNotes.filter { $0.isCompleted == false }.map(NoteViewModel.init)
+    }
 }

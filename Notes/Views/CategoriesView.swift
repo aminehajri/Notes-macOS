@@ -21,16 +21,25 @@ struct CategoriesView: View {
             List {
                 Text("My Lists").foregroundStyle(.teal)
                 ForEach(categoriesViewModel.categories) { category in
-                    HStack {
-                        Image(systemName: IconUtils.line3HorizontalCircleFill)
-                            .font(.title)
-                            .foregroundStyle(category.color)
-                        Text(category.name)
-                    }.contextMenu {
-                        Button {
-                            categoriesViewModel.delete(category: category)
-                        } label: {
-                            Text("Delete")
+                    
+                    NavigationLink {
+                        CategoryHeaderView(name: category.name, count: category.notesCount, color: category.color)
+                        
+                        NoteView(onNoteAdded: { title, dueDate in
+                            categoriesViewModel.saveTo(category: category, title: title, dueDate: dueDate)
+                        })
+                    } label: {
+                        HStack {
+                            Image(systemName: IconUtils.line3HorizontalCircleFill)
+                                .font(.title)
+                                .foregroundStyle(category.color)
+                            Text(category.name)
+                        }.contextMenu {
+                            Button {
+                                categoriesViewModel.delete(category: category)
+                            } label: {
+                                Text("Delete")
+                            }
                         }
                     }
                     

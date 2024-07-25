@@ -10,7 +10,7 @@ import CoreData
 import AppKit
 
 @objc(Category)
-class Category: NSManagedObject, BaseModelProtocol {
+public class Category: NSManagedObject, BaseModelProtocol {
     
     static var all: NSFetchRequest<Category> {
         let request: NSFetchRequest<Category> = Category.fetchRequest()
@@ -28,6 +28,7 @@ extension Category {
     
     @NSManaged public var color: NSColor?
     @NSManaged public var name: String?
+    @NSManaged public var notes: NSSet?
     
 }
 

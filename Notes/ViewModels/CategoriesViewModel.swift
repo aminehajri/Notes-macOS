@@ -25,6 +25,20 @@ class CategoriesViewModel: NSObject, ObservableObject {
         fetchAll()
     }
     
+    func saveTo(category: CategoryViewModel, title: String, dueDate: Date?) {
+        
+        let note = Note(context: context)
+        note.title = title
+        note.dueDate = dueDate
+        note.category = Category.byId(id: category.id)
+        
+        do {
+            try note.save()
+        } catch {
+            print(error)
+        }
+    }
+    
     func delete(category: CategoryViewModel) {
         let category: Category? = Category.byId(id: category.id)
         if let category = category {
