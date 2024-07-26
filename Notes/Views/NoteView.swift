@@ -10,12 +10,15 @@ import SwiftUI
 struct NoteView: View {
     
     typealias NoteAdded = ((String, Date?) -> Void)?
+    typealias NoteDeleted = ((NoteViewModel) -> Void)?
     
     var onNoteAdded: NoteAdded
+    var onNoteDeleted: NoteDeleted
     var notes: [NoteViewModel]
     
-    init(onNoteAdded: NoteAdded = nil, notes: [NoteViewModel]) {
+    init(onNoteAdded: NoteAdded = nil, onNoteDeleted: NoteDeleted = nil, notes: [NoteViewModel]) {
         self.onNoteAdded = onNoteAdded
+        self.onNoteDeleted = onNoteDeleted
         self.notes = notes
     }
     
@@ -23,9 +26,10 @@ struct NoteView: View {
         VStack(alignment: .leading) {
             
             List {
-                
                 ForEach(notes, id: \.noteId) { note in
-                    Text(note.title)
+                    NoteItemCellView(note: note, onNoteItemDeleted: { item in
+                    onNoteDeleted?(item)
+                    })
 //                    Divider()
                 }
                 

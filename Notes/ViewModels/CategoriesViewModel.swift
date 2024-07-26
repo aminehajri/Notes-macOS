@@ -12,6 +12,7 @@ import CoreData
 class CategoriesViewModel: NSObject, ObservableObject {
     
     @Published var categories = [CategoryViewModel]()
+    
     private let fetchedResultsController: NSFetchedResultsController<Category>
     private var context: NSManagedObjectContext
     
@@ -44,6 +45,15 @@ class CategoriesViewModel: NSObject, ObservableObject {
         if let category = category {
             try? category.delete()
         }
+    }
+    
+    func deleteNote(_ note: NoteViewModel) {
+        
+        let note: Note? = Note.byId(id: note.noteId)
+        if let note = note {
+           try? note.delete()
+        }
+        
     }
     
     private func fetchAll() {
