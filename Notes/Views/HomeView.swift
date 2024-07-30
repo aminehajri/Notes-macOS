@@ -8,12 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @Environment(\.managedObjectContext) var context: NSManagedObjectContext
+    
     var body: some View {
         NavigationSplitView {
             SideMenu()
                 .frame(minWidth: 200)
+            
+            
         } detail: {
-            Text("content")
+            let categoriesViewModel = CategoriesViewModel(context: context)
+            let firstCategoryViewModel = categoriesViewModel.categories.first
+            
+            if let firstCategoryViewModel = firstCategoryViewModel {
+                
+                CategoryHeaderView(name: firstCategoryViewModel.name, count: firstCategoryViewModel.notesCount, color: firstCategoryViewModel.color)
+                
+                NoteView(notes: firstCategoryViewModel.notes)
+            }
         }
     }
 }

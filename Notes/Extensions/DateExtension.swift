@@ -23,7 +23,7 @@ extension Date {
     
     var formatAsString: String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM/DD/YYYY"
+        formatter.dateFormat = "MM/dd/yyyy"
         return formatter.string(from: self)
     }
 }
