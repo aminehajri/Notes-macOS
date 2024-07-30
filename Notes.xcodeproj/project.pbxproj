@@ -34,6 +34,8 @@
 		E7625C4F2C2D967C00628EFB /* DueDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C4E2C2D967C00628EFB /* DueDate.swift */; };
 		E7625C522C2D970D00628EFB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625C512C2D970D00628EFB /* DateExtension.swift */; };
 		E78072DD2C52A44400C26549 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78072DC2C52A44400C26549 /* Note.swift */; };
+		E793252C2C59232F00E2CC9B /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E793252B2C59232F00E2CC9B /* Delay.swift */; };
+		E793252E2C5925EA00E2CC9B /* AllNotesCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E793252D2C5925EA00E2CC9B /* AllNotesCountView.swift */; };
 		E798B9642C528FBE00132876 /* AddNewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798B9632C528FBE00132876 /* AddNewNoteView.swift */; };
 		E798B9662C5290CC00132876 /* DueDateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798B9652C5290CC00132876 /* DueDateSelectionView.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		E7625C4E2C2D967C00628EFB /* DueDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDate.swift; sourceTree = "<group>"; };
 		E7625C512C2D970D00628EFB /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		E78072DC2C52A44400C26549 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		E793252B2C59232F00E2CC9B /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		E793252D2C5925EA00E2CC9B /* AllNotesCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotesCountView.swift; sourceTree = "<group>"; };
 		E798B9632C528FBE00132876 /* AddNewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNoteView.swift; sourceTree = "<group>"; };
 		E798B9652C5290CC00132876 /* DueDateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDateSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,7 +106,7 @@
 		E7625C0B2C2870D800628EFB /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				E7625C3D2C2B258700628EFB /* IconUtils.swift */,
+				E793252A2C59231E00E2CC9B /* Utils */,
 				E7625C502C2D96E900628EFB /* Extensions */,
 				E7625C3F2C2B6FC100628EFB /* Transformers */,
 				E7625C322C299D3100628EFB /* ViewModels */,
@@ -141,6 +145,7 @@
 				E70B03222C53AAC900F3E5FA /* NoteItemCellView.swift */,
 				E70B03242C53B77200F3E5FA /* EditNoteItemView.swift */,
 				E70B03282C53BB7700F3E5FA /* CalendarView.swift */,
+				E793252D2C5925EA00E2CC9B /* AllNotesCountView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +195,15 @@
 				E7625C512C2D970D00628EFB /* DateExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E793252A2C59231E00E2CC9B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E7625C3D2C2B258700628EFB /* IconUtils.swift */,
+				E793252B2C59232F00E2CC9B /* Delay.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +278,7 @@
 			files = (
 				E7625C452C2B78F700628EFB /* CategoryViewModel.swift in Sources */,
 				E7625C522C2D970D00628EFB /* DateExtension.swift in Sources */,
+				E793252E2C5925EA00E2CC9B /* AllNotesCountView.swift in Sources */,
 				E78072DD2C52A44400C26549 /* Note.swift in Sources */,
 				E7625C362C29A02200628EFB /* BaseModelProtocol.swift in Sources */,
 				E7625C4D2C2D956700628EFB /* NoteViewModel.swift in Sources */,
@@ -287,6 +302,7 @@
 				E7625C4B2C2D942500628EFB /* NoteView.swift in Sources */,
 				E7625C432C2B74F400628EFB /* CategoriesViewModel.swift in Sources */,
 				E7625C3E2C2B258700628EFB /* IconUtils.swift in Sources */,
+				E793252C2C59232F00E2CC9B /* Delay.swift in Sources */,
 				E7625C412C2B6FDD00628EFB /* NSColorTransformer.swift in Sources */,
 				E7625C0D2C2870D800628EFB /* NotesApp.swift in Sources */,
 			);

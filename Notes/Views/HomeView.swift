@@ -11,6 +11,7 @@ struct HomeView: View {
     var body: some View {
         NavigationSplitView {
             SideMenu()
+                .frame(minWidth: 200)
         } detail: {
             Text("content")
         }

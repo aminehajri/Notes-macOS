@@ -29,7 +29,7 @@ class CategoriesViewModel: NSObject, ObservableObject {
     }
     
     private func setupObservers() {
-       
+        
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(managedObjectContextDidChange), name:  NSNotification.Name.NSManagedObjectContextObjectsDidChange, object: context)
     }
@@ -66,7 +66,7 @@ class CategoriesViewModel: NSObject, ObservableObject {
     func deleteNote(_ note: NoteViewModel) {
         let note: Note? = Note.byId(id: note.noteId)
         if let note = note {
-           try? note.delete()
+            try? note.delete()
         }
     }
     
@@ -75,6 +75,12 @@ class CategoriesViewModel: NSObject, ObservableObject {
         if let note = note {
             note.isCompleted = true
             try? note.save()
+        }
+    }
+    
+    func allNotesCount() -> Int {
+        categories.reduce(0) {sum, category in
+            sum + category.notesCount
         }
     }
     

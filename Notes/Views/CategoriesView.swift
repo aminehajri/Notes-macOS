@@ -19,6 +19,7 @@ struct CategoriesView: View {
         VStack(alignment: .leading, spacing: 0) {
             
             List {
+                AllNotesCountView(count: categoriesViewModel.allNotesCount())
                 Text("My Lists").foregroundStyle(.teal)
                 ForEach(categoriesViewModel.categories) { category in
                     
@@ -34,6 +35,8 @@ struct CategoriesView: View {
                                 .font(.title)
                                 .foregroundStyle(category.color)
                             Text(category.name)
+                            Spacer()
+                            Text("\(category.notesCount)")
                         }.contextMenu {
                             Button {
                                 categoriesViewModel.delete(category: category)

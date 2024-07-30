@@ -14,6 +14,7 @@ struct NoteItemCellView: View {
     @State private var isChecked = false
     
     let note: NoteViewModel
+    let delay = Delay()
     
     var onNoteItemDeleted : (NoteViewModel) -> Void = { _ in }
     var onNoteItemCompleted : (NoteViewModel) -> Void = { _ in }
@@ -26,6 +27,14 @@ struct NoteItemCellView: View {
                 .opacity(0.2)
                 .onTapGesture {
                     isChecked.toggle()
+                    
+                    if isChecked {
+                        delay.performWork {
+                            onNoteItemCompleted(note)
+                        }
+                    } else {
+                        delay.cancel()
+                    }
                 }
             
             VStack(alignment: .leading, content: {
