@@ -10,6 +10,7 @@ import SwiftUI
 struct NoteItemCellView: View {
     
     @State private var isActive = false
+    @State private var showPopOver = false
     
     let note: NoteViewModel
     
@@ -43,13 +44,21 @@ struct NoteItemCellView: View {
                     }
                 
                 Image(systemName: IconUtils.exclaimationMarkCircle).foregroundStyle(.purple)
+                    .onTapGesture {
+                        showPopOver = true
+                    }.popover(isPresented: $showPopOver, arrowEdge: .leading, content: {
+                        EditNoteItemView(note: note) {
+                            showPopOver = false
+                        }
+                    })
             }
             
         }
         .contentShape(Rectangle())
         .onHover(perform: { value in
-            isActive = value
-            
+            if !showPopOver {
+                isActive = value
+            }
         })
     }
 }

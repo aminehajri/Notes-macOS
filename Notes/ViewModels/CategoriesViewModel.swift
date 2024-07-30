@@ -23,7 +23,23 @@ class CategoriesViewModel: NSObject, ObservableObject {
         super.init()
         fetchedResultsController.delegate = self
         
+        setupObservers()
+        
         fetchAll()
+    }
+    
+    private func setupObservers() {
+       
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(managedObjectContextDidChange), name:  NSNotification.Name.NSManagedObjectContextObjectsDidChange, object: context)
+    }
+    
+    @objc func managedObjectContextDidChange(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else { return  }
+        
+        if let updates = userInfo[NSUpdatedObjectsKey] as? Set<Note>, updates.count > 0 {
+            fetchAll()
+        }
     }
     
     func saveTo(category: CategoryViewModel, title: String, dueDate: Date?) {
