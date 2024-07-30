@@ -64,12 +64,18 @@ class CategoriesViewModel: NSObject, ObservableObject {
     }
     
     func deleteNote(_ note: NoteViewModel) {
-        
         let note: Note? = Note.byId(id: note.noteId)
         if let note = note {
            try? note.delete()
         }
-        
+    }
+    
+    func markAsCompleted(_ note: NoteViewModel) {
+        let note: Note? = Note.byId(id: note.noteId)
+        if let note = note {
+            note.isCompleted = true
+            try? note.save()
+        }
     }
     
     private func fetchAll() {

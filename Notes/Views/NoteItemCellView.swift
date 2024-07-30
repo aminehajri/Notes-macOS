@@ -11,17 +11,22 @@ struct NoteItemCellView: View {
     
     @State private var isActive = false
     @State private var showPopOver = false
+    @State private var isChecked = false
     
     let note: NoteViewModel
     
     var onNoteItemDeleted : (NoteViewModel) -> Void = { _ in }
+    var onNoteItemCompleted : (NoteViewModel) -> Void = { _ in }
     
     var body: some View {
         
         HStack(alignment: .firstTextBaseline) {
-            Image(systemName: IconUtils.circle)
+            Image(systemName: isChecked ? IconUtils.circleInsetFilled: IconUtils.circle)
                 .font(.system(size: 14))
                 .opacity(0.2)
+                .onTapGesture {
+                    isChecked.toggle()
+                }
             
             VStack(alignment: .leading, content: {
                 Text(note.title)
