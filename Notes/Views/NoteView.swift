@@ -35,7 +35,6 @@ struct NoteView: View {
                     }, onNoteItemCompleted: { item in
                         onNoteCompleted?(item)
                     })
-//                    Divider()
                 }
                 
                 AddNewNoteView { title, dueDate in

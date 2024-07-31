@@ -16,7 +16,6 @@ struct HomeView: View {
             SideMenu()
                 .frame(minWidth: 200)
             
-            
         } detail: {
             let categoriesViewModel = CategoriesViewModel(context: context)
             let firstCategoryViewModel = categoriesViewModel.categories.first
@@ -26,6 +25,8 @@ struct HomeView: View {
                 CategoryHeaderView(name: firstCategoryViewModel.name, count: firstCategoryViewModel.notesCount, color: firstCategoryViewModel.color)
                 
                 NoteView(notes: firstCategoryViewModel.notes)
+            } else {
+                Text("You don't have any list")
             }
         }
     }

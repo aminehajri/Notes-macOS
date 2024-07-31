@@ -20,7 +20,9 @@ struct CategoriesView: View {
             
             List {
                 AllNotesCountView(count: categoriesViewModel.allNotesCount())
-                Text("My Lists").foregroundStyle(.teal)
+                
+                Spacer()
+            
                 ForEach(categoriesViewModel.categories) { category in
                     
                     NavigationLink {
